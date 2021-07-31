@@ -22,7 +22,7 @@ const Button = (props) => {
 
 Button.defaultProps = {
     bg: false,
-    width: '80%',
+    width: false,
     margin: '10px',
 };
 
