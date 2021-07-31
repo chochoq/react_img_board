@@ -6,16 +6,16 @@ import Image from '../elements/Image';
 const Post = (props) => {
     return (
         <React.Fragment>
-            <Grid padding='16px' >
-                <Grid is_flex>
+            <Grid>
+                <Grid is_flex padding='16px'>
                     <Image shape="circle" src={props.src}></Image>
-                    
-                    <div>유저사진/유저이름/ㄱㅔ시글작석시간/수정버튼</div>
+
+                    <div>유저이름/ㄱㅔ시글작석시간/수정버튼</div>
+                </Grid>
+                <Grid >
+                    <Image shape="rectangle" src={props.src}></Image>
                 </Grid>
                 <Grid padding='16px'>
-                    <div>내용이미지</div>
-                </Grid>
-                <Grid>
                     <div>내용</div>
                 </Grid>
                 <Grid padding='16px'>

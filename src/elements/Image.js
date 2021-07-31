@@ -17,13 +17,16 @@ const Image = (props) => {
 
     if (shape === "rectangle") {
         return (
-            <div></div>
+            <React.Fragment>
+            <AspectOuter>
+                <AspectInner {...styles}></AspectInner>
+            </AspectOuter>
+        </React.Fragment>
         )
     }
 
     return (
         <React.Fragment>
-
         </React.Fragment>
     )
 };
@@ -33,6 +36,19 @@ Image.defaultProps = {
     src: 'https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/VCEZ4GJJG7PYYYJ3TGVUFY63R4.jpg',
     size: 36,
 };
+
+const AspectOuter = styled.div`
+    width: 100%;
+    min-width:250px;
+`;
+const AspectInner = styled.div`
+    position: relative;
+    padding-top: 75%;
+    /* 넓이의 4대3 */
+    overflow: hidden;
+    background-image: url('${(props) => props.src}');
+    background-size: cover;s
+`;
 
 const ImageCircle = styled.div`
     --size:${(props) => props.size}px;
