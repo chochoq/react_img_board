@@ -47,7 +47,7 @@ const AspectInner = styled.div`
     /* 넓이의 4대3 */
     overflow: hidden;
     background-image: url('${(props) => props.src}');
-    background-size: cover;s
+    background-size: cover;
 `;
 
 const ImageCircle = styled.div`
