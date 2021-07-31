@@ -2,6 +2,7 @@ import React from 'react';
 
 import Grid from '../elements/Grid';
 import Image from '../elements/Image';
+import Text from '../elements/Text';
 
 const Post = (props) => {
     return (
@@ -10,16 +11,20 @@ const Post = (props) => {
                 <Grid is_flex padding='16px'>
                     <Image shape="circle" src={props.src}></Image>
 
-                    <div>유저이름/ㄱㅔ시글작석시간/수정버튼</div>
+                    <Text bold>{props.user_info.user_name}</Text>
+                    <Text>{props.insert_dt}</Text>
+                    <button>수정</button>
+
                 </Grid>
                 <Grid >
                     <Image shape="rectangle" src={props.src}></Image>
                 </Grid>
                 <Grid padding='16px'>
-                    <div>내용</div>
+                    <Text>{props.contents}</Text>
+
                 </Grid>
                 <Grid padding='16px'>
-                <div>댓글 카운트</div>
+                    <Text bold>댓글 {props.comment_cnt}개</Text>
                 </Grid>
             </Grid>
         </React.Fragment>
