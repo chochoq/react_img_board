@@ -24,7 +24,7 @@ const Grid = (props) => {
 Grid.defaultProps = {
     is_flex: false,
     width: '100%',
-    padding: false,
+    padding: false, 
     margin: false,
     bg: false,
 }
