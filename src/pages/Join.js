@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { Input,Button } from '../elements/index';
-import Text from '../elements/Text';
-import Grid from '../elements/Grid';
+import { Input,Button,Text,Grid } from '../elements/index';
+
 const Join = (props) => {
     
     return(

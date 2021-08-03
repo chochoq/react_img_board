@@ -1,7 +1,5 @@
 import React from 'react';
-import Button from '../elements/Button';
-import Login from '../pages/Login';
-import Join from '../pages/Join'; 
+import {Button} from '../elements/index';
 import { BrowserRouter, Route,Link } from 'react-router-dom';
 
 
