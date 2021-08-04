@@ -1,34 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Text, Grid  } from './index';
 
 const Input = (props) => {
-    const { width, height, placeholder,padding,margin, children } = props;
+    const { label,placeholder,_onChange } = props;
 
-    const styles = {
-        width: width,
-        height: height,
-        padding:padding,
-        placeholder: placeholder,
-        margin:margin,
-    }
     return (
-        <InputBox {...styles}>
-            {children}
-        </InputBox>
+        <React.Fragment>
+                <Text margin="0px">{label}</Text>
+                <input placeholder={placeholder} onChange={_onChange}/>
+        </React.Fragment>
     );
 }
 
 Input.defaultProps = {
-    placeholder: false,
-    margin: false,
+    placeholder: '텍스트를 입력해주세요',
+    margin:   false,
+    label: '라벨텍스트',
+    _onChange:()=>{}
 };
 
-const InputBox = styled.input`
-    placeholder:${(props)=>props.placeholder};
-    width: 80%;
-    height:100%;
-    padding: 5px;
-    margin: ${(props)=>props.margin};
+const ElInput = styled.input`
+    
 `;
-
 export default Input;

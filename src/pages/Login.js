@@ -7,12 +7,10 @@ const Login = (props) => {
     return(
         <React.Fragment>
             <Grid padding='16px'>
-                <h1>login</h1>
+                <Text size='32px' bold>login</Text>
                 <Grid>
-                    <Text margin='5px'>아이디</Text>
-                    <Input placeholder='아이디를 입력해주세요'></Input>
-                    <Text margin='0px'>비밀번호</Text>
-                    <Input placeholder='비밀번호를 입력해주세요'></Input>
+                    <Input label='아이디' placeholder='아이디를 입력해주세요' _onChange={()=>{console.log('아이디')} }/>
+                    <Input label='비밀번호' placeholder='비밀번호를 입력해주세요' _onChange={()=>{console.log('비밀번호')}}/> 
                 </Grid>
                 <Button margin='10px 0px'>로그인하기</Button>
             </Grid>
