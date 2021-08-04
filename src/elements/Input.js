@@ -7,8 +7,10 @@ const Input = (props) => {
 
     return (
         <React.Fragment>
+            <Grid>
                 <Text margin="0px">{label}</Text>
-                <input placeholder={placeholder} onChange={_onChange}/>
+                <ElInput placeholder={placeholder} onChange={_onChange} />
+            </Grid>
         </React.Fragment>
     );
 }
@@ -21,6 +23,9 @@ Input.defaultProps = {
 };
 
 const ElInput = styled.input`
-    
+    border: 1px solid #212121;
+    width: 100%;
+    padding:12px 4px;
+    box-sizing: border-box;
 `;
 export default Input;

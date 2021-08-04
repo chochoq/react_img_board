@@ -2,36 +2,28 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = (props) => {
-    const { width, height, padding, margin, bg, children } = props;
+    const { text,_onClick } = props;
     
-    const styles = {
-        width: width,
-        height: height,
-        padding: padding,
-        margin: margin,
-        bg: bg,
-    }
     return (
         <React.Fragment>
-            <Btn {...styles}>
-                {children}
-            </Btn>
+            <Btn onClick={_onClick}>{text}</Btn>
         </React.Fragment>
     );
 }
 
 Button.defaultProps = {
-    bg: false,
-    width: false,
-    margin: '10px',
+    text: "텍스트",
+    _onClick:()=>{}
 };
 
 const Btn = styled.button`
-    width: ${(props)=>props.width};
+    width: 100%;
     height:100%;
-    padding: 5px;
-    margin: ${(props) => props.margin};
-    bg:${(props)=>props.bg? `background-color: ${props.bg}`:''};
+    padding: 12px;
+    background-color:#212121;
+    color: #ffffff;
+    box-sizing: border-box;
+    border: none;
 `;
 
 export default Button;
