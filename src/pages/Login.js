@@ -5,7 +5,7 @@ import { getCookie, setCookie, deleteCookie } from '../shared/Cookie';
 
 const Login = (props) => {
 
-    console.log(getCookie('user_id'));
+    // console.log(getCookie('user_id'));
 
     const login = () => {
         setCookie('user_id', '아이디', 3);
@@ -25,7 +25,7 @@ const Login = (props) => {
                 <Button margin='10px 0px' text='로그인하기'
                     _onClick={() => {
                         console.log('로그인');
-                        deleteCookie('user_id');
+                        login();
                     }
                 } />
             </Grid>

@@ -6,7 +6,7 @@ const getCookie = (name) => {
 
     // `; ${name}=` 기준으로 나눠서 파싱
     let parts = value.split(`; ${name}=`);
-    // 
+    //  
     if (parts.length === 2) {
         return parts.pop().split(';').shift();
     }
