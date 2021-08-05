@@ -16,8 +16,8 @@ function App() {
         <BrowserRouter>
           <Header/>
             <Route exact path="/" component={PostList} />
-            <Route path="/login" component={Login} />
-            <Route path="/join" component={Join} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/join" component={Join} />
           </BrowserRouter>
       </Grid>
     </React.Fragment>

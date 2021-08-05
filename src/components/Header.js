@@ -15,10 +15,10 @@ const Header = (props) => {
                 
                 <Grid is_flex>
 
-                        <Button>회원가입</Button>
+                        <Button text='회원가입'/>
 
 
-                        <Button>로그인</Button>
+                        <Button text='로그인'/>
 
                 </Grid>
             </Grid>
