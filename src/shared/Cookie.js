@@ -12,16 +12,16 @@ const getCookie = (name) => {
     }
 };
 
-// 쿠키를 저장하는 함수
+// 쿠키 저장
 const setCookie = (name, value, exp = 5) => {
+    // 만료하기 위한 날짜
     let date = new Date();
-    // 만료하기위한 날짜를 만들어준다
     date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
-    // 저장
-    document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+    // 저장 
+    document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
 };
 
-// 쿠키삭제
+// 쿠키 삭제
 const deleteCookie = (name) => {
     let date = new Date('2020-01-01').toUTCString();
 
