@@ -17,7 +17,7 @@ const Header = (props) => {
         }
     });
 
-    // 쿠키(setIsLogin) 이 true일 때
+    // 쿠키(IsLogin) = true
     if (is_login) {
         return (
             <React.Fragment>
@@ -37,7 +37,7 @@ const Header = (props) => {
             </React.Fragment>
         )
     }
-    // 쿠키(setIsLogin) 이 false일 때
+    // 쿠키(IsLogin) = false
     return (
         <React.Fragment>
             <Grid is_flex padding='4px 16px'>
@@ -48,8 +48,8 @@ const Header = (props) => {
                 </Grid>
                 
                 <Grid is_flex>
-                        <Button text='회원가입'/>
-                        <Button text='로그인'/>
+                    <Button text='회원가입'/>
+                    <Button text='로그인' _onClick={()=>{} }/>
                 </Grid>
             </Grid>
             
