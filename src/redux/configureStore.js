@@ -5,8 +5,8 @@ import { connectRouter } from "connected-react-router";
 
 import User from "./modules/user";
 
+// history 주입
 export const history = createBrowserHistory();
-
 
 const rootReducer = combineReducers({
     user: User,
@@ -38,7 +38,3 @@ const enhancer = composeEnhancers(applyMiddleware(...middlewares));
 let store = (initialStore) => createStore(rootReducer, enhancer);
 
 export default store();
-
-
-// history
-
